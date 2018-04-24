@@ -30,4 +30,10 @@ public class TicTacToe {
         return isValid;
     }
 
+    public boolean withRange(int spot) {
+        return spot > 0 && spot < board.length + 1;
+    }
+
+
+
 }
