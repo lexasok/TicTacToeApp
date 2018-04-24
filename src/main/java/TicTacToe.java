@@ -62,6 +62,21 @@ public class TicTacToe {
         System.out.println();
     }
 
+    public boolean isThereAWinner() {
+        boolean diagonalsAndMiddles = rightDi() || leftDi() || middleRow() || secondCol() && board[4] != '-';
+        boolean topAndFirst = topRow() || firstCol() && board[0] != '-';
+        boolean bottomAndThird = bottomRow() || thirdCol && board[8] != '-';
+
+        if (diagonalsAndMiddles) {
+            this.winner = board[4];
+        } else if (topAndFirst) {
+            this.winner = board[0];
+        } else if (bottomAndThird) {
+            this.winner = board[8];
+        }
+        return diagonalsAndMiddles || topAndFirst || bottomAndThird;
+    }
+
 
 
 }
