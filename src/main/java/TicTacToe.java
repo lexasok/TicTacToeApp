@@ -104,6 +104,24 @@ public class TicTacToe {
         return board[2] == board[4] && board[4] == board[6];
     }
 
+    public boolean isTheBoardFilled() {
+        for (int i = 0; i < board.length; i ++) {
+            if (board[i] == '-') {
+                return false;
+            }
+        }
+        return true;
+    }
 
+    public String gameOver() {
+        boolean didSomeOneWin = isThereAWinner();
+        if (didSomeOneWin) {
+             return "We have a winner! The winner is " + this.winner + "'s";
+        } else if (isTheBoardFilled()) {
+            return "Friendship won: GAME OVER!!!";
+        } else {
+            return "notOver";
+        }
+    }
 
 }
