@@ -15,12 +15,10 @@ public class TicTacToe {
 
     public char[] setBoard() {
         char[] board = new char[9];
-        for (char c : board) {
-            c = '-';
+        for (int i = 0; i < board.length; i ++) {
+            board[i] = '-';
         }
-
-
-        return null;
+        return board;
     }
 
 }
