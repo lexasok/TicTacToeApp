@@ -20,7 +20,7 @@ public class TicTacToeApp {
             System.out.println("The game started!\n");
             TicTacToe.printIndexBoard();
 
-            System.out.println("Enter number of spot, where you want to put your token:\n");
+            System.out.println("\nEnter number of spot, where you want to put your token:\n");
 
             while (game.gameOver().equals("notOver")) {
                 if (game.currentMarker == game.userMarker) {
@@ -40,6 +40,16 @@ public class TicTacToeApp {
                 System.out.println();
                 game.printBoard();
             }
+            System.out.println(game.gameOver());
+            System.out.println();
+            System.out.println("Play again& Y - yes! :");
+            if (sc.next().charAt(0) != 'Y') {
+                doYouWantToPlay = false;
+                sc.close();
+            }
+            System.out.println();
+            System.out.println();
+            System.out.println();
 
         }
     }
