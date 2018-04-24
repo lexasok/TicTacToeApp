@@ -15,6 +15,20 @@ public class TicTacToeApp {
 
             TicTacToe game = new TicTacToe(playerToken, aiToken);
             Ai ai = new Ai();
+
+
+            System.out.println("The game started!\n");
+            TicTacToe.printIndexBoard();
+
+            System.out.println("Enter number of spot, where you want to put your token:\n");
+
+            while (game.gameOver().equals("notOver")) {
+                if (game.currentMarker == game.userMarker) {
+                    System.out.println("Your turn!\n");
+                    int spot = sc.nextInt();
+                }
+            }
+
         }
     }
 }
