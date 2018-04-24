@@ -26,7 +26,19 @@ public class TicTacToeApp {
                 if (game.currentMarker == game.userMarker) {
                     System.out.println("Your turn!\n");
                     int spot = sc.nextInt();
+                    while (!game.playTurn(spot)) {
+                        System.out.println("Try again! " + spot + " is invalid.\n");
+                        spot = sc.nextInt();
+                    }
+                    System.out.println(" You picked: " + spot + "!");
+                } else {
+                    System.out.println("It's my turn!");
+                    int aiSpot = ai.picSpot(game);
+                    game.playTurn(aiSpot);
+                    System.out.println("I picked: " + aiSpot + "!");
                 }
+                System.out.println();
+                game.printBoard();
             }
 
         }
