@@ -50,6 +50,18 @@ public class TicTacToe {
         System.out.println();
     }
 
+    public void printIndexBoard() {
+        System.out.println();
+        for (int i = 0; i < board.length; i ++) {
+            if (i % 3 == 0 && i != 0) {
+                System.out.println();
+                System.out.println("--------------");
+            }
+            System.out.print(" | " + (i + 1));
+        }
+        System.out.println();
+    }
+
 
 
 }
